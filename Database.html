@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Busca de usuários</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="Database.css">
+    </head>
+    <table>
+        <form>
+            <th>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" ><br><br>
+            </th>
+            <th>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" ><br><br>
+            </th>    
+            <th>
+                <label for="telefone">Telefone:</label>
+                <input type="text" id="telefone" name="telefone"><br><br>
+            </th>
+            <th>
+                <label for="cpf">Cpf:</label>
+                <input type="text" id="cpf" name="cpf"><br><br>
+            </th>
+            <th>
+                <label for="dataDeNascimento">Data de nascimento:</label>
+                <input type="text" id="dataDeNascimento" name="dataDeNascimento"><br><br>
+            </th>
+            <th>
+                <button type="submit">Envie</button>
+            </th>
+        </form>
+    </table>
+
+    <table id = 'myTable'>
+        <thead>
+            <tr>
+                <th class="text-center">Nome</th>
+                <th class="text-center">Email</th>
+                <th class="text-center">Telefone</th>
+                <th class="text-center">Cpf</th>
+                <th class="text-center">Data de nascimento</th>
+                <th>
+                
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+    </table>
+    <a href="../TelaAdiministrativa.html">
+        <button class="button">Voltar</button>
+    </a>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.13.2/datatables.min.js"></script>
+    <script src="Database.js"></script>
+</html>
