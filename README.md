@@ -4,7 +4,7 @@ Projeto para a prova de estágio fiap
 A prova é uma simulação da criação de uma landpage para a uma grande empresa de varejo. Esse github é a parte do **Frontend** do site. Ele foi feito utilizando vscode, com as linguagens html, css e javascript. As bibliotecas usadas foram: bootstrap, jquery e datatable. Além disso, foi utilizada a extensão live server.
 
 ## Divisão do projeto
-O projeto foi basicamente construído em 4 páginas diferentes:
+O projeto foi basicamente construído em 4 páginas diferentes, cada uma com seu css e javascript (exceto a Tela Adiministrativa):
 * Tela Administrativa
 * Cadastro
 * Busca de usuários
