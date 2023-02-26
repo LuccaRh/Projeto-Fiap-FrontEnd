@@ -1,14 +1,17 @@
 const form = document.querySelector('form');
 
+//Ao entrar na página, a tabela já é construida com todos os usuários
 $(document).ready(function () {
     let query = Querybuild();
     FiltrarAjax(query);
 });
 
+//Ao clicar no botão, é levado para a página e atualizar, com o id na sua query
 $(document).on('click', '.editar', function(){
     let id = $(this).data('id');
     window.location.href = "Atualizamento/Atualizamento.html?id="+id
 })
+//Ao clicar é feito o request para a api do backend, já com o id na sua query
 $(document).on('click', '.excluir', function(){    
     let id = $(this).data('id');
      $.ajax({
@@ -22,6 +25,7 @@ $(document).on('click', '.excluir', function(){
         });
 })
 
+//Procura pelo forms, datatable é removida, e outra é criada, com base nos valores do forms
 form.addEventListener('submit', async (event) => {
     event.preventDefault();
     $('#myTable').DataTable().clear().destroy();
@@ -30,6 +34,8 @@ form.addEventListener('submit', async (event) => {
 
 })
 
+//Cria a Database utilizando o método filtro da api, na coluna id há dois botões, com a propriedade data-id com o 
+//id do usuário
 function FiltrarAjax(query){
     $.ajax({
         type: "GET",
@@ -65,6 +71,7 @@ function FiltrarAjax(query){
     });
 }
 
+//Constroi a query baseada no form, se não for inserido nenhum valor (ex: ao entrar na pag), a query fica vazia
 function Querybuild(){
     let query = "";
     let nome = document.getElementById('nome').value || null;
